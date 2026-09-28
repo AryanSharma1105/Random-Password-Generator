@@ -1,14 +1,22 @@
-
+      
+#Import Random and String Module
 import random
 import string
 
-total = string.ascii_letters + string.digits + string.punctuation
+#Decide Your Password's Characters and its length
+characters = string.ascii_letters + string.digits + string.punctuation
 
-length = 10
+length = 16
 
-password1 = "".join(random.choices(total,k=length))
-password = "".join(random.sample(total,length))
+#Random Password with Unique Characters
+password = "".join(random.sample(characters,length))
 
-print("Password = ",password1)
-print("Password = ",password)
+#Another Random Password with Repeating Characters
+password1 = "".join(random.choices(characters,k = length))
+	
+print("Your Unique Password is:",password)
+print("Your Password is:",password1)
+
+
+
 
